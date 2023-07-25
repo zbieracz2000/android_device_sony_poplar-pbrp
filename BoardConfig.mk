@@ -17,6 +17,8 @@
 ### INHERIT FROM YOSHINO-COMMON
 include device/sony/yoshino-common/BoardConfigPlatform.mk
 
+MAINTAINER := "zbieracz2000"
+
 DEVICE_PATH := device/sony/poplar
 
 PRODUCT_PLATFORM := yoshino
