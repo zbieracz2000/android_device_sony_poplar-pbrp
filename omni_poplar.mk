@@ -16,6 +16,9 @@
 
 # Inherit AOSP configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/pb/config/common.mk)
+
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := omni_poplar
