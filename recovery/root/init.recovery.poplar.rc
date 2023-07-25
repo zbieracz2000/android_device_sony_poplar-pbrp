@@ -15,6 +15,24 @@ on fs
 
     # This needs to be supported by the init binary!
     install_keyring
+	
+	on property:ro.crypto.state=encrypted
+    start sbinqseecomd
+
+on property:vendor.sys.listeners.registered=true
+    start keymaster-3-0
+    start gatekeeper-1-0
+
+on property:ro.crypto.fs_crypto_blkdev=*
+    stop sbinqseecomd
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+
+on property:twrp.all.users.decrypted=true 
+    stop sbinqseecomd
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+    stop keystore
 
 on post-fs
     # start clearpad_post_probe when filesystem is available for fwflash
