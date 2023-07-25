@@ -5,4 +5,10 @@
     "target_path": "device/sony/yoshino-common",
     "revision": "android-9.0"
   }
+  {
+    "remote":      "TeamWin",
+    "repository":  "android_device_qcom_twrp-common",
+    "target_path": "device/qcom/twrp-common",
+    "revision":    "android-10"
+  }
 ]
